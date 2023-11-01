@@ -1,0 +1,13 @@
+https://github.com/devopshint/java-app-with-maven.git
+#Step1 specify the base image
+FROM alpine
+
+#Step2 Downloadd and install dependencies 
+RUN apk add --update redis
+
+#Step3 Setup and startup command 
+CMD ["redis-server"]
+
+[6:40 pm, 01/11/2023] Surya Dora Vpp: docker build .
+[6:41 pm, 01/11/2023] Surya Dora Vpp: docker build -t Surya/regis:locate .
+[6:41 pm, 01/11/2023] Surya Dora Vpp: docker run Surya/regis
